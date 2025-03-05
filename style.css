@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('backspace.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  color: black;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+}
+
+.navbar-links a {
+  color:black;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1em;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.landing-header {
+  /* background-color: rgba(76, 175, 80, 0.8); */
+  color: black;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px; /* Adjust for fixed navbar */
+  background: transparent;
+}
+
+.landing-main {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.landing-main h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.landing-main p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+.container {
+  /* background: white; */
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  margin: 20px auto;
+}
+
+.form-container {
+  display: none;
+  margin-top: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: darkblue;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button-group button {
+  flex: 1;
+  margin: 0 5px;
+}
+
+.registration-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.registration-buttons button {
+  width: 100%;
+}

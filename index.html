@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <h1>Company Name</h1>
+      </div>
+      <nav class="navbar-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="landing-header" id="home">
+    <h1>Welcome to Our Website</h1>
+  </div>
+  <div class="landing-main">
+    <h1>Discover Our Amazing Work</h1>
+    <p>Our website will help you achieve your goals and improve your life. Join us today and start your journey to success!</p>
+  </div>
+
+  <div class="container">
+    <h2></h2>
+    <div class="button-group">
+      <button onclick="showForm('loginForm')">Login</button>
+      <button onclick="showForm('registerForm')">Register</button>
+    </div>
+
+    <div id="loginForm" class="form-container">
+      <h3>Login</h3>
+      <input type="text" placeholder="Username" id="loginUser">
+      <input type="password" placeholder="Password" id="loginPass">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="registerForm" class="form-container">
+      <h3>Register</h3>
+      <div class="registration-buttons">
+        <button onclick="showForm('tempReg')">Temporary Registration</button>
+        <button onclick="showForm('permReg')">Permanent Registration</button>
+        <button onclick="showForm('container')">Back</button>
+      </div>
+    </div>
+
+    <div id="tempReg" class="form-container">
+      <h3>Temporary Registration</h3>
+      <input type="text" placeholder="Name" id="tempName">
+      <input type="text" placeholder="Number Plate" id="tempPlate">
+      <input type="text" placeholder="Phone Number" id="tempPhone">
+      <button onclick="registerTemp()">Submit</button>
+      <button onclick="showForm('registerForm')">Back</button>
+    </div>
+
+    <div id="permReg" class="form-container">
+      <h3>Permanent Registration</h3>
+      <div class="registration-buttons">
+        <button onclick="showForm('orgReg')">Organizational Vehicle</button>
+        <button onclick="showForm('indReg')">Individual Vehicle</button>
+        <button onclick="showForm('registerForm')">Back</button>
+      </div>
+    </div>
+
+    <div id="orgReg" class="form-container">
+      <h3>Organizational Vehicle Registration</h3>
+      <input type="text" placeholder="Owner Name" id="orgOwner">
+      <input type="text" placeholder="Sector" id="orgSector">
+      <input type="text" placeholder="Address" id="orgAddress">
+      <input type="text" placeholder="Number Plate" id="orgPlate">
+      <input type="text" placeholder="Mobile Number" id="orgPhone">
+      <input type="text" placeholder="Number of vehicles" id="orgvehicles">
+      <input type="text" placeholder="Password" id="orgpassword">
+      <button onclick="registerOrg()">Submit</button>
+      <button onclick="showForm('permReg')">Back</button>
+    </div>
+
+    <div id="indReg" class="form-container">
+      <h3>Individual Vehicle Registration</h3>
+      <input type="text" placeholder="Owner Name" id="indOwner">
+      <input type="text" placeholder="Address" id="indAddress">
+      <input type="text" placeholder="Number Plate" id="indPlate">
+      <input type="text" placeholder="Mobile Number" id="indPhone">
+      <input type="text" placeholder="Password" id="orgpassword">
+      <button onclick="registerInd()">Submit</button>
+      <button onclick="showForm('permReg')">Back</button>
+    </div>
+  </div>
+
+  <script>
+    function scrollToForms() {
+      document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showForm(formId) {
+      document.querySelectorAll('.form-container').forEach(form => {
+        form.style.display = 'none';
+      });
+      document.getElementById(formId).style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
